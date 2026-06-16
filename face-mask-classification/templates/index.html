@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Face Mask Classification System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            Face Mask Classification
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#team">Team</a>
+            </li>
+
+            <li>
+                <a href="#detection">Detection</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <section class="home" id="home">
+
+        <div class="overlay"></div>
+
+        <div class="home-content">
+
+            <h1>
+                CNN Based Face Mask Classification System
+            </h1>
+
+            <p>
+                Web-based deep learning application for classifying face mask usage using Convolutional Neural Network algorithm.
+            </p>
+
+            <a href="#detection">
+
+                <button>
+                    Start Detection
+                </button>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="team" id="team">
+
+        <div class="section-title">
+
+            <h2>Project Team</h2>
+
+            <p>
+                Final Project - Data Mining Course
+            </p>
+
+        </div>
+
+        <div class="team-container">
+
+            <div class="team-card">
+
+                <h3>
+                    Ratih Mira Rivanni
+                </h3>
+
+                <span>
+                    2313020048
+                </span>
+
+                <p>
+                    Frontend Developer
+                </p>
+
+            </div>
+
+            <div class="team-card">
+
+                <h3>
+                    Lolita Dwi Febrianti S.
+                </h3>
+
+                <span>
+                    2313020116
+                </span>
+
+                <p>
+                    Backend Developer
+                </p>
+
+            </div>
+
+            <div class="team-card">
+
+                <h3>
+                    Indana Zulfa Nurul L.
+                </h3>
+
+                <span>
+                    2313020123
+                </span>
+
+                <p>
+                    CNN Algorithm & Model Training
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="detection" id="detection">
+
+        <div class="section-title">
+
+            <h2>Face Mask Detection</h2>
+
+            <p>
+                Upload image and analyze face mask usage.
+            </p>
+
+        </div>
+
+        <div class="detect-container">
+
+            <div class="detect-card">
+
+                <h3>
+                    Upload Image
+                </h3>
+
+                <input type="file" id="imageInput" accept="image/*">
+
+                <label for="imageInput">
+
+                    Choose Image
+
+                </label>
+
+            </div>
+
+    <div class="detect-card">
+
+        <h3>
+            Image Preview
+        </h3>
+
+        <div class="preview-wrapper">
+
+            <img id="previewImage">
+
+
+        </div>
+
+    </div>
+
+            <div class="detect-card">
+
+                <h3>
+                    Prediction Result
+                </h3>
+
+                <div id="result">
+
+                    Waiting for prediction...
+
+                </div>
+
+                <button onclick="predict()">
+
+                    Analyze Image
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
