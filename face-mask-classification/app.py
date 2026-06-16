@@ -269,5 +269,9 @@ def predict():
 # RUN
 # ==========================
 
-if __name__ != "__main__":
-    app = app
+if __name__ == "__main__":
+    app.run(
+        debug=True,
+        use_reloader=False,
+        port=5001
+    )
